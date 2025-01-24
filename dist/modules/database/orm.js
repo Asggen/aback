@@ -9,7 +9,7 @@ const connectDatabases = async () => {
     try {
         // Connect to PostgreSQL if enabled in the config
         if (config_1.config.database.DB_POSTGRES === 'true' || config_1.config.database.DB_CONNECT_ALL === 'true') {
-            await (0, postgres_1.connectPostgres)();
+            await (0, postgres_1.postgresdbConfigs)();
             console.log('PostgreSQL connected');
         }
         // Connect to MongoDB if enabled in the config
