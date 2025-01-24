@@ -7,7 +7,7 @@ const path_1 = require("path");
 const startServer = () => {
     const server = (0, http_1.createServer)((req, res) => {
         if (req.url === '/favicon.ico') {
-            const faviconPath = (0, path_1.join)(__dirname, '../../src/favicon.ico'); // Adjust the path as needed
+            const faviconPath = (0, path_1.join)(__dirname, '../../src/favicon.ico');
             (0, fs_1.readFile)(faviconPath, (err, data) => {
                 if (err) {
                     res.writeHead(500);
@@ -20,9 +20,9 @@ const startServer = () => {
             return;
         }
         res.writeHead(200, { 'Content-Type': 'text/plain' });
-        res.end('Welcome to ABack Framework!\n');
+        res.end('Welcome to Asggen Backend Framework! (]ABack\n');
     });
-    server.listen(3000, () => {
+    return server.listen(3000, () => {
         console.log('Server is running on http://localhost:3000');
     });
 };

@@ -1,1 +1,1 @@
-export declare const startServer: () => void;
+export declare const startServer: () => any;
